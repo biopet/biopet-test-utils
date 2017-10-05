@@ -5,7 +5,7 @@ scalaVersion := "2.11.11"
 
 resolvers += Resolver.sonatypeRepo("snapshots")
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1"
+libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.1"
 libraryDependencies += "org.testng" % "testng" % "6.8"
 
 parallelExecution in Test := false
