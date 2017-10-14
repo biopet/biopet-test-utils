@@ -7,6 +7,8 @@ import org.scalatest.testng.TestNGSuite
 
 trait BiopetTest extends TestNGSuite with Matchers {
   def resourcePath(p: String): String = {
-    Paths.get(this.getClass.getResource(p).toURI).toString
+    val resource = this.getClass.getResource(p)
+    if (resource == null) throw new IllegalStateException(s"Resource '$p' not found")
+    else Paths.get(this.getClass.getResource(p).toURI).toString
   }
 }
