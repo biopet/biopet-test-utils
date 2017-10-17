@@ -24,4 +24,13 @@ class TraitTest extends BiopetTest {
       resourcePath("/does_not_exist.file")
     }.getMessage shouldBe "Resource '/does_not_exist.file' not found"
   }
+
+  @Test
+  def testResourceFile(): Unit = {
+    Source.fromFile(resourceFile("/test.txt")).mkString shouldBe "test"
+
+    intercept[IllegalStateException] {
+      resourceFile("/does_not_exist.file")
+    }.getMessage shouldBe "Resource '/does_not_exist.file' not found"
+  }
 }
