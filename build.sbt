@@ -1,6 +1,22 @@
 organization := "com.github.biopet"
 name := "test-utils"
 
+homepage := Some(url("https://github.com/biopet/test-utils"))
+licenses := Seq("MIT" -> url("https://opensource.org/licenses/MIT"))
+
+scmInfo := Some(
+  ScmInfo(
+    url("https://github.com/biopet/test-utils"),
+    "scm:git@github.com:biopet/test-utils.git"
+  )
+)
+
+developers := List(
+  Developer(id="ffinfo", name="Peter van 't Hof", email="pjrvanthof@gmail.com", url=url("https://github.com/ffinfo"))
+)
+
+publishMavenStyle := true
+
 scalaVersion := "2.11.11"
 
 resolvers += Resolver.sonatypeRepo("snapshots")
@@ -30,8 +46,8 @@ releaseProcess := Seq[ReleaseStep](
   commitReleaseVersion,
   tagRelease,
   releaseStepCommand("publishSigned"),
+  releaseStepCommand("sonatypeReleaseAll"),
   setNextVersion,
   commitNextVersion,
-  releaseStepCommand("sonatypeReleaseAll"),
   pushChanges
 )
