@@ -4,9 +4,14 @@ name := "test-utils"
 
 biopetUrlName := "test-utils"
 
+startYear := Some(2014)
+
 biopetIsTool := false
 
-developers += Developer(id="ffinfo", name="Peter van 't Hof", email="pjrvanthof@gmail.com", url=url("https://github.com/ffinfo"))
+developers += Developer(id = "ffinfo",
+                        name = "Peter van 't Hof",
+                        email = "pjrvanthof@gmail.com",
+                        url = url("https://github.com/ffinfo"))
 
 scalaVersion := "2.11.11"
 
