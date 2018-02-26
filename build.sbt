@@ -13,10 +13,10 @@ developers += Developer(id = "ffinfo",
                         email = "pjrvanthof@gmail.com",
                         url = url("https://github.com/ffinfo"))
 
-scalaVersion := "2.11.11"
+scalaVersion := "2.11.12"
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.1"
-libraryDependencies += "org.mockito" % "mockito-all" % "1.9.5"
-libraryDependencies += "org.testng" % "testng" % "6.8"
+libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6"
+libraryDependencies += "org.mockito" % "mockito-all" % "1.10.19"
+libraryDependencies += "org.testng" % "testng" % "6.14.2"
 
 parallelExecution in Test := false
