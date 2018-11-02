@@ -19,6 +19,6 @@ scalaVersion := "2.11.12"
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5"
 libraryDependencies += "org.mockito" % "mockito-all" % "1.10.19"
-libraryDependencies += "org.testng" % "testng" % "6.14.2"
+libraryDependencies += "org.testng" % "testng" % "6.14.3"
 
 parallelExecution in Test := false
